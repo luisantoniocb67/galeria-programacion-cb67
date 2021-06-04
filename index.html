@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <title>Galeria Fotografica</title>
+        <meta charset="UTF-8">
+        <style>
+            body{
+
+                background: -webkit-radial-gradient(#6d0268,#0a0011);
+            }
+            .container span{
+                font-size: 50pt;
+                font-weight: bold;
+                position: relative;
+                font-family: "Fredoka One";  
+                cursor: pointer;
+                transition: all 300ms ease-in-out;              
+            }
+            .container span::before{
+                content: var(--l);
+                position: absolute;
+                transform: scale(1.5);
+                filter: blur(10px);
+            }
+            .container span::after{
+                content: var(--l);
+                position: absolute;
+                top: 80%;
+                left: 0;
+                filter: blur(30px);
+                transform: rotateX(50deg);
+            }
+            .container span:hover{
+                filter: contrast(250%);
+            }
+            .container span:nth-child(1){
+                color: #00bef8;
+            }
+            .container span:nth-child(2){
+                color: #ff0697;
+            }
+            .container span:nth-child(3){
+                color: #ff4d00;
+            }
+            .container span:nth-child(4){
+                color: #ffd400;
+            }
+            .container span:nth-child(5){
+                color: #bb00ff;
+            }
+            .contenedor-galeria{
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                max-width: 1000px;
+                margin: auto;
+            }
+            .galeria__img{
+                margin-bottom: 50px;
+                object-fit: cover;
+                filter: brightness(100%);/*
+                animation: escalar 1.5s infinite alternate;
+            }
+            @keyframes escalar{
+                to{
+                    transform: scale(1);
+                }
+                from{
+                    transform: scale(1.05);
+                }*/
+            }
+            .galeria__img:hover{
+                filter: brightness(130%);
+            }
+            .CP{
+                background-color: #73717471;
+            }
+            .facebook{
+                /*text-decoration: none;*/
+                color: black;
+            }
+            p{
+                font-size: 20px;
+            }
+            h2{
+                color: #c4a404;
+            }
+        </style>
+    </head>
+    <body>
+        <hr color="black" size="6">
+        <hr size="3">
+        <hr color="black" size="6">
+        <div class="container" align="center">
+            <span style="--l: '--Gal';">--Gal</span>
+            <span style="--l: 'eria ';">eria </span>
+            <span style="--l: 'Foto';">Foto</span>
+            <span style="--l: 'graf';">graf</span>
+            <span style="--l: 'ica--';">ica--</span>
+        </div>
+        <hr color="black" size="6">
+        <hr size="3">
+        <hr color="black" size="6">
+        <main>
+            <div class="contenedor-galeria">
+                <div class="galeria__img" id="contenidos"  style=" border:thin solid rgba(255, 255, 255, 0)" 
+                onmouseover="document.getElementById('contenidos').style.borderColor='red';"
+                onmouseout="document.getElementById('contenidos').style.borderColor='rgba(255, 255, 255, 0';"
+                ondblclick="alert('Mi nombre es: Jessica Duran Beltran')">
+                    <img  onmousedown="javascript:this.width=271;this.height=490" 
+                    onmouseup="javascript:this.width=251;this.height=460" src="imagenes\jessi1.jpeg" width="251"/>
+                </div>
+                <div class="galeria__img" id="otro" style=" border:thin solid rgba(255, 255, 255, 0)"
+                onmouseover="document.getElementById('otro').style.borderColor='red';"
+                onmouseout="document.getElementById('otro').style.borderColor='rgba(255, 255, 255, 0';"
+                ondblclick="alert('Mi nombre es Diana Laura de la Torre Bernabe')">
+                    <img onmousedown="javascript:this.width=271;this.height=510" 
+                    onmouseup="javascript:this.width=235;this.height=460" src="imagenes\diana1.jpeg" width="235"
+                    />
+                </div>
+                <div class="galeria__img" id="clar" style=" border:thin solid rgba(253, 253, 253, 0)"
+                onmouseover="document.getElementById('clar').style.borderColor='red';"
+                onmouseout="document.getElementById('clar').style.borderColor='rgba(255, 255, 255, 0';"
+                ondblclick="alert('Tengo 16 años')">
+                    <img onmousedown="javascript:this.width=271;this.height=490" 
+                    onmouseup="javascript:this.width=241;this.height=460" src="imagenes\jessi2.jpeg" width="241"/>
+                </div>
+                <div class="galeria__img" id="nel" style=" border:thin solid rgba(255, 255, 255, 0)"
+                onmouseover="document.getElementById('nel').style.borderColor='red';"
+                onmouseout="document.getElementById('nel').style.borderColor='rgba(255, 255, 255, 0';"
+                ondblclick="alert('Tengo 16 años')">
+                    <img onmousedown="javascript:this.width=300;this.height=510" 
+                    onmouseup="javascript:this.width=270;this.height=480" src="imagenes\diana2.jpeg" width="270"/>
+                </div>
+                <div class="galeria__img" id="sim" style=" border:thin solid rgba(255, 255, 255, 0)"
+                onmouseover="document.getElementById('sim').style.borderColor='red';"
+                onmouseout="document.getElementById('sim').style.borderColor='rgba(255, 255, 255, 0';"
+                ondblclick="alert('Me gusta jugar videojuegos')">
+                    <img onmousedown="javascript:this.width=290;this.height=510" 
+                    onmouseup="javascript:this.width=260;this.height=480" src="imagenes\jessi3.jpeg" width="260"/>
+                </div>
+                <div class="galeria__img" id="tamb" style=" border:thin solid rgba(255, 255, 255, 0)"
+                onmouseover="document.getElementById('tamb').style.borderColor='red';"
+                onmouseout="document.getElementById('tamb').style.borderColor='rgba(255, 255, 255, 0';"
+                ondblclick="alert('Me encanta estar en mi casa')">
+                    <img onmousedown="javascript:this.width=300;this.height=510" 
+                    onmouseup="javascript:this.width=270;this.height=480" src="imagenes\diana3.jpeg" width="270"/>
+                </div>
+                <div class="galeria__img" id="nose" style=" border:thin solid rgba(255, 255, 255, 0)"
+                onmouseover="document.getElementById('nose').style.borderColor='red';"
+                onmouseout="document.getElementById('nose').style.borderColor='rgba(255, 255, 255, 0';"
+                ondblclick="alert('Me gusta jugar basquet')">
+                    <img onmousedown="javascript:this.width=300;this.height=510" 
+                    onmouseup="javascript:this.width=270;this.height=480" src="imagenes\jessi4.jpeg" width="270"/>
+                </div>
+                <div class="galeria__img" id="cosa" style=" border:thin solid rgba(255, 255, 255, 0)"
+                onmouseover="document.getElementById('cosa').style.borderColor='red';"
+                onmouseout="document.getElementById('cosa').style.borderColor='rgba(255, 255, 255, 0';"
+                ondblclick="alert('Me gusta ver series')">
+                    <img onmousedown="javascript:this.width=300;this.height=510" 
+                    onmouseup="javascript:this.width=270;this.height=480" src="imagenes\diana6.jpeg"  width="270"/>
+                </div>
+                <div class="galeria__img" id="trcosa" style=" border:thin solid rgba(255, 255, 255, 0)"
+                onmouseover="document.getElementById('trcosa').style.borderColor='red';"
+                onmouseout="document.getElementById('trcosa').style.borderColor='rgba(255, 255, 255, 0';"
+                ondblclick="alert('Me encanta dormir')">
+                    <img onmousedown="javascript:this.width=300;this.height=510" 
+                    onmouseup="javascript:this.width=270;this.height=480" src="imagenes\jessi5.jpeg"  width="270"/>
+                </div>
+                <div class="galeria__img" id="abcosa" style=" border:thin solid rgba(255, 255, 255, 0)"
+                onmouseover="document.getElementById('abcosa').style.borderColor='red';"
+                onmouseout="document.getElementById('abcosa').style.borderColor='rgba(255, 255, 255, 0';"
+                ondblclick="alert('Me gusta salir con mis amigos')">
+                    <img onmousedown="javascript:this.width=900;this.height=500" 
+                    onmouseup="javascript:this.width=870;this.height=480" src="imagenes\diana5.jpeg"  width="870"/>
+                </div>
+            </div>
+        </main>
+    </body>
+    <div class="CP">
+        <center><br>
+            <hr color="purple" size="2px">
+            <h2>--Contacto de Programadores--</h2>
+            <hr color="purple" size="2px"><br>
+                <p>Diana Laura de la Torre Bernabe</p>
+                <b>Facebook:<a href="https://www.facebook.com/diana.delatorre.984349" class="facebook"> Diana De La Torre</a><br></b>
+                <b>Correo: diannalauradelatorre@gmail.com</b><br>
+                <b>WhatsApp: 477 802 0117</b><br><br>
+                <p>Jessica Duran Beltran</p>
+                <b>Facebook:<a href="https://www.facebook.com/Jessi.Durbel.07" class="facebook"> Jessi Beltran</a><br></b>
+                <b>Correo: jessicabeltran@gmail.com</b><br>
+                <b>WhatsApp: 235 101 1366</b><br><br>
+                <p>Luis Antonio Contreras Guevara</p>
+                <b>Facebook:<a href="https://www.facebook.com/luis.mur.94" class="facebook"> Luis Antonio</a><br></b>
+                <b>Correo: luistonocg@gmail.com</b><br>
+                <b>WhatsApp: 235 100 8368</b><br><br>
+        </center>
+    </div>
+
+</html>
